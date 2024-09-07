@@ -8,7 +8,7 @@ const app = express()
 
 app.use(bodyParser.json())
 dotenv.config()
-const port = process.env.PORT || 5000
+const port = process.env.PRODUCTS_PORT || 5000
 const mongoUrl = process.env.MONGO_URL
 
 mongoose.connect(mongoUrl).then(() => {
@@ -17,3 +17,5 @@ mongoose.connect(mongoUrl).then(() => {
 })
 
 app.use("/api/products", productsRoute)
+
+// Learn to integrate cloudinary, microservices, jwt
