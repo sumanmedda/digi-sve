@@ -3,7 +3,9 @@ import productsModel from "../productsModel/productsModel.mjs"
 export const createProduct = async (req, res) => {
   try {
     const productData = new productsModel(req.body)
-    const productExist = await productsModel.findOne({ name: req.body.name })
+    const productExist = await productsModel.findOne({
+      productUniqID: req.body.productUniqID,
+    })
     if (productExist) {
       return res.status(400).json({ message: "Product already exists" })
     }
