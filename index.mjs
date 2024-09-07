@@ -2,7 +2,7 @@ import express from "express"
 import bodyParser from "body-parser"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
-import productsRoute from "./products/productsRoute/productsRoute.mjs"
+import productsRoute from "../Products/products-api/productsRoute/productsRoute.mjs"
 
 const app = express()
 
